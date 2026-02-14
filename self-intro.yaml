@@ -1,0 +1,112 @@
+- question: self introduction
+  description: 
+  - Hi, This is Lakshmi Narayana. I have total 4 years of experience. Eariler I worked telecom domain L2 operation and support engineer, later I shifted to DevOps and Cloud.
+
+  - I am now working as DevOps Engineer
+      # - DevOps Engineer - 3 to 5 years
+      # - Senior DevOps Engineer - 5 to 6 years 
+
+  - We are using RHEL9, Ansible for configuration management and VM deployments, Terraform as IaaC, Jenkins for CICD, multiple scanning tools like Sonar, Metasploit, Veracode, ECR scan and Docker for image building and Kubernetes for container orchestration, our testing team use few testing frameworks like Selenium and Cucumber, Shell script for simple automations and cronjobs, We have separate team for monitoring for ELK and prometheus. We are using Python for Cloud and other automations.
+
+  - We takecare of all the deployments from DEV to PROD through our automated process. we let developers only focus on programming we handle everytime else.
+
+  # cicd
+
+  - We are following DevSecOps, shift left, Build once and run anywhere strategies. We have our centralized CICD pipelines powered by Jenkins-shared-library.
+
+  - We are following feature branching model. We have 2 types of branches. One is main branch as long lived branch and everything else is feature branches. Earlier, we followed Git Model where we had master and development as long lived branches and Release, feature and hotfix as short lived branches.
+  
+  - Developers create feature branches, once they push the code to remote branch we configured automated development pipelines through Jenkins webhooks.
+
+  - Once the development pipeline is success then we deploy that image in all remaining environments.
+
+  - Once they complete development I raise PR and get the approval. I follow merge strategy for merging feature branch to main branch.
+
+ 
+  # secuiry and scanning
+
+  - We are following shiftleft where we scan and test the application in early stages like development. So that we filter majority issues while development is going on.
+
+  - We have SonarQube for static source code analysis and static application security testing(SAST). We have quality gates configured where I checks for 0 issues, 0 bugs, 0 vulnerabilities, Maintainability and Security rating is "A", Minimum code coverage is 80% if applications failed to meet this criteria we will fail the build.
+
+  - We have Metasploit as opensource scanning tool, where we scan all the dependencies of a application. This tool recommends any upgrades or issues on the dependencies. Based on this our developers continuously upgrade their dependencies.
+
+  - We are using Veracode for dynamic application security testing(DAST), before going for QA we submit our application URL as target in Veracode for attacks, if we find serious issues we work with developers to resolve them.
+
+  - We even enabled ECR scan to check the issues in images.
+
+  - We build applications only in dev environment, we promote the same build into multiple environments with different configurations(HPA) through helm charts. So, here we addressed the issues of working in DEV and not working in PROD.
+
+  - We are using jenkins shared library, we have centralized pipelines for different programming languages with different development platform. We have nodeJSEKS, nodeJSVM, pythonEKS, pythonVM, javaEKS, javaVM pipelines. We make sure every component follows the same process of deployments.
+
+  - We give developers a simple Jenkinsfile referring our jenkins-shared-library. They send us their project and component and their programming language and their deployment platform. Based on this we will trigger appropriate platform.
+
+  - When we move to QA environment, our developers trigger pipeline itt can fetch the image from ECR and deploy the application through our helm charts then we are calling testing team pipelines for integration tests.
+
+  - Before going for PROD, we have a CR process approval. Our support team raises a CR ticket in JIRA mentioning date and time, description, rollback plan, scanning results, testing results. Once it is approved we trigger the PROD pipelines in deployment window.
+
+  - Our pipeline checks for JIRA status, deployment window. if everything is fine we fetch the image and deploy application in PROD environment. Later developers do a simple sanity checks.
+
+  # * shift left
+  # * DevSecOps
+  # * Build once and run anywhere
+  # * Centralized pipelines
+  # * Branching strategy
+  # * Infrastructure as a code
+  # * configuration management
+  # - RBAC
+  # - EBS 
+  # - EFS
+  # - Ingress controller
+  # * EKS upgrade
+  # * Terraform modules development
+  # * optimizing docker images
+  # * Using helm charts for deployments
+  # * Legacy VM applications and Microservices
+
+
+- question: what are your daily tasks and responsibilities ??
+  description:
+
+  # 1. project onboarfing
+  # 2. project maintenance
+  # 3. project improvements
+  # 4. project changes
+  # 5. project upgrades
+
+  - We are a team of 5 members, we are loggin our work through our project management tool JIRA. We follow the sprint process. We have daily standup calls
+
+  - My team leader assigns the tasks to us.
+
+  - We onboard projects into our DevOps process. We are taking care of infra through Terraform in all environments. We deployed our own terraform modules.we maintain these modules.
+
+  - We meet with development team explaning our pipelnes, understanding how they are developing and merging. We teach them feature branching and PR process.
+
+  - We will onboard them into Jenkins, SonarQube, Veracode, Metasploit, Kubernetes, Ansible if they are following VM deployments. We create the required infra through terraform.
+
+  - We will setup pipelines for them and we will assist them for the first 2 production releases.
+
+  - We will maintain existing application if they face any issues in any environments.
+
+  - Application teams frequently upgrade their versions for nodeJS 20 to 21 we will assist them if they face any issues. We takecare of EKS upgrades, terraform updates(like few fields terraform deprecating), docker upgrades, Jenkins agent, bastion host. Every one month or 3 months there is an upgrade.
+
+  - Each time SRE team upgrade other tools,  we check our pipelines with our internal Hello world applications for compatability issues.
+
+  - We continuously have a monthly meetings to discuss on the improvements. Yesterday we had a meeting on using K8 jenkins images instead of VM. We planned to scan the base images of our application before we use.
+
+  - We are planning to develop the centralized pipeline for .NET and go language.
+
+  - We are using Ansible playbooks to create the AMI for our legacy applications.
+
+  - Our applications are secure, scalable and Highly available.
+
+  - We will takecare of persistent volumes if required by application teams.
+
+  - We continuously upgrade our ingress, EBS, EFS drivers.
+
+  - HPA, VPC, Subnets, route tables, security groups, bastion server, rds, eks, acm, alb, ingress, targetgroupbinding, ecr, cdn, jenkins-agent integration, helm charts, rbac, VM autoscaling, IAM policy
+
+
+
+
+  
