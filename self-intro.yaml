@@ -107,6 +107,25 @@
   - HPA, VPC, Subnets, route tables, security groups, bastion server, rds, eks, acm, alb, ingress, targetgroupbinding, ecr, cdn, jenkins-agent integration, helm charts, rbac, VM autoscaling, IAM policy
 
 
+- question: What are the chllenges u faced in ur project??
+  answer:
+  - I was not aware of kubernetes earlier. We are dealing legacy VM applications in my previous project. I learnt k8 in 20 days and started implemented in our applications.
+  - EKS upgrade was not aware earlier. so the requirement was came so i taken this challange. using terraform i implemented
+  - they asked to configure jenkins agent to our nodejs project
+  - they asked to setup controller and ingress resource for new project
+  - We don't have any scannings in our project earlier. I proposed sonarscan is mandatory as per industry standards.I enabled sonar scan and quality gates in our project.
+  - We were creating resources directly earlier. Later I implemented terraform modules for better reusability and easy maintenance.
+
+- projects:
+
+  - airtel
+  - hdfc
+  - walmart
+  - telecom
+  - pharma
+  - retail
+  - banking
+  - oil and energy
 
 
   
